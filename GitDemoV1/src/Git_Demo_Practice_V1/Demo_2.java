@@ -1,6 +1,6 @@
 package Git_Demo_Practice_V1;
 
-public class IELaunch {
+public class Demo_2 {
 
 	public static void main(String[] args) {
  
