@@ -6,6 +6,8 @@ public class Demo_3 {
 
 		System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("https://www.facebook.com/");
 	}
 
 }
