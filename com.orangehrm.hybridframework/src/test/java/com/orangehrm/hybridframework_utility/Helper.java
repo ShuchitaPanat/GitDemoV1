@@ -10,8 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Helper {
-
-	public static String captureScreenshots(WebDriver driver) {
+	
+public static String captureScreenshots(WebDriver driver) {
 		
 		
 		String screenshotpath = System.getProperty("user.dir")+"\\Screenshot\\Orangehrm_"

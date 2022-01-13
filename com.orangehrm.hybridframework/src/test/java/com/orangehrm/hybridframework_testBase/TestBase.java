@@ -7,18 +7,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -28,12 +27,9 @@ import com.orangehrm.hybridframework_utility.Helper;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-
-
 public class TestBase {
-	
-	
+
+
 	public static WebDriver driver = null;
 	public static ConfigDataProvider configDataProvider = null;
 	public static ExcelDataProvider excelDataProvider = null;
@@ -47,12 +43,15 @@ public class TestBase {
 	
 	@BeforeSuite
 	public void init() {
+	 Reporter.log("init config and excel data provider", true);
+	 
 	 configDataProvider = new ConfigDataProvider(configDataPath);
 	 excelDataProvider = new ExcelDataProvider(excelDataPath);
 
 	 String currentDir = System.getProperty("user.dir") + "//Reports//orangehrm_" 
 	 + Helper.getCurrentDateTime()+ ".html";
 	 
+	 Reporter.log("init extent htmlreporter, ExtentReports and setting up system info", true);
 	 htmlReporter = new ExtentHtmlReporter(currentDir);
 	 
 	 htmlReporter.config().setDocumentTitle("Automation Test Reports");
@@ -68,6 +67,9 @@ public class TestBase {
 	 extentReport.setSystemInfo("TE", " Ravi");
 	 extentReport.setSystemInfo("Test Case", "RT");
 	 
+	 Reporter.log("Excel and Config Data provider are ready to use", true);
+	 Reporter.log("ExtentReports and ExtentHtmlReporter are ready to use ", true);
+	 
 	}
 	
 	
@@ -77,21 +79,28 @@ public class TestBase {
 	@Parameters({"browser"})
 	public void setUP(@Optional("Chrome")String browser)  {
 		
+		
 		if(browser.equals("Chrome")) {
 			//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			Reporter.log("Initialize Chrome browser and navigating to application under test", true);
+
 		}
 		else if(browser.equals("Firefox")) {
 			//System.setProperty("webdriver.gecko.driver", "./Driver/geckodriver.exe");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			Reporter.log("Initialize Firefox browser and navigating to application under test", true);
+
 		}
 		
 		else if(browser.equals("IE")) {
 			//System.setProperty("webdriver.gecko.driver", "./Driver/geckodriver.exe");
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
+			Reporter.log("Initialize IE browser and navigating to application under test", true);
+
 		}
 		
 		else {
@@ -100,6 +109,8 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.get(configDataProvider.getUrl());
+		Reporter.log("Browser launch and we are on login page ", true);
+
 		
 		}
 		@AfterMethod
@@ -132,14 +143,10 @@ public class TestBase {
 		
 		@AfterTest
 		public void flushReports() {
+			Reporter.log("extent reports flush", true);
 			extentReport.flush();
+			
+			Reporter.log("close browser window", true);
 			driver.quit();
 		}
-		
-}	
-		
-
-		
-	
-	
-
+}

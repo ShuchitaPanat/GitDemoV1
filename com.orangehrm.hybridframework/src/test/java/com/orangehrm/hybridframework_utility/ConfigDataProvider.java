@@ -4,18 +4,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-
- public class ConfigDataProvider{
-	 
-	 public Properties prop = null;
+public class ConfigDataProvider {
+public Properties prop = null;
 	
 	public ConfigDataProvider(String configDataPath) {
 		try {
-		File fs = new File(configDataPath);
+		File fs = new File("./Config/config.properties");
 		FileInputStream fins = new FileInputStream(fs);
 		prop = new Properties();
 		prop.load(fins);
-		
 		} catch (Exception e) {
 			System.out.println("File not found : "  +e.getMessage());
 		}
@@ -35,6 +32,5 @@ import java.util.Properties;
 	public String getUrl() {
 		return prop.getProperty("url");
 	}
-		
-		
+
 }

@@ -1,17 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[init config and excel data provider]]>
+    </line>
+    <line>
+      <![CDATA[init extent htmlreporter, ExtentReports and setting up system info]]>
+    </line>
+    <line>
+      <![CDATA[Excel and Config Data provider are ready to use]]>
+    </line>
+    <line>
+      <![CDATA[ExtentReports and ExtentHtmlReporter are ready to use ]]>
+    </line>
+    <line>
+      <![CDATA[Initialize Chrome browser and navigating to application under test]]>
+    </line>
+    <line>
+      <![CDATA[Browser launch and we are on login page ]]>
+    </line>
+    <line>
+      <![CDATA[init LoginPage Object]]>
+    </line>
+    <line>
+      <![CDATA[Enter username into username text field]]>
+    </line>
+    <line>
+      <![CDATA[Enter password into password text field]]>
+    </line>
+    <line>
+      <![CDATA[Click on login button]]>
+    </line>
+    <line>
+      <![CDATA[Login Success]]>
+    </line>
+    <line>
+      <![CDATA[extent reports flush]]>
+    </line>
+    <line>
+      <![CDATA[close browser window]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-12-28T21:06:19 IST" name="Default suite" finished-at="2021-12-28T21:06:35 IST" duration-ms="15295">
+  <suite started-at="2022-01-11T09:09:57 IST" name="Default suite" finished-at="2022-01-11T09:10:18 IST" duration-ms="21258">
     <groups>
     </groups>
-    <test started-at="2021-12-28T21:06:19 IST" name="Default test" finished-at="2021-12-28T21:06:35 IST" duration-ms="15295">
+    <test started-at="2022-01-11T09:09:57 IST" name="Default test" finished-at="2022-01-11T09:10:18 IST" duration-ms="21258">
       <class name="com.orangehrm.hybridframework_testCases.LoginTC">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2021-12-28T21:06:17 IST" name="init" finished-at="2021-12-28T21:06:19 IST" duration-ms="2389" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2022-01-11T09:09:54 IST" name="init" finished-at="2022-01-11T09:09:57 IST" duration-ms="2639" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[init config and excel data provider]]>
+            </line>
+            <line>
+              <![CDATA[init extent htmlreporter, ExtentReports and setting up system info]]>
+            </line>
+            <line>
+              <![CDATA[Excel and Config Data provider are ready to use]]>
+            </line>
+            <line>
+              <![CDATA[ExtentReports and ExtentHtmlReporter are ready to use ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2021-12-28T21:06:19 IST" name="setUP" finished-at="2021-12-28T21:06:30 IST" duration-ms="10335" status="PASS">
+        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2022-01-11T09:09:57 IST" name="setUP" finished-at="2022-01-11T09:10:11 IST" duration-ms="13890" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -20,66 +71,52 @@
             </param>
           </params>
           <reporter-output>
+            <line>
+              <![CDATA[Initialize Chrome browser and navigating to application under test]]>
+            </line>
+            <line>
+              <![CDATA[Browser launch and we are on login page ]]>
+            </line>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="loginToOrangeHrmTC002()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2021-12-28T21:06:30 IST" name="loginToOrangeHrmTC002" finished-at="2021-12-28T21:06:32 IST" duration-ms="2508" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Invalid credentials expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Invalid credentials expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at com.orangehrm.hybridframework_testCases.LoginTC.loginToOrangeHrmTC002(LoginTC.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="loginToOrangeHrmTC002()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2022-01-11T09:10:11 IST" name="loginToOrangeHrmTC002" finished-at="2022-01-11T09:10:16 IST" duration-ms="5341" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[init LoginPage Object]]>
+            </line>
+            <line>
+              <![CDATA[Enter username into username text field]]>
+            </line>
+            <line>
+              <![CDATA[Enter password into password text field]]>
+            </line>
+            <line>
+              <![CDATA[Click on login button]]>
+            </line>
+            <line>
+              <![CDATA[Login Success]]>
+            </line>
           </reporter-output>
         </test-method> <!-- loginToOrangeHrmTC002 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2021-12-28T21:06:32 IST" name="tearDown" finished-at="2021-12-28T21:06:33 IST" duration-ms="376" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2022-01-11T09:10:16 IST" name="tearDown" finished-at="2022-01-11T09:10:16 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginToOrangeHrmTC002 status=FAILURE method=LoginTC.loginToOrangeHrmTC002()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5] output={null}]]]>
+                <![CDATA[[TestResult name=loginToOrangeHrmTC002 status=SUCCESS method=LoginTC.loginToOrangeHrmTC002()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5] output=init LoginPage Object]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2021-12-28T21:06:33 IST" name="flushReports" finished-at="2021-12-28T21:06:35 IST" duration-ms="1920" status="PASS">
+        <test-method is-config="true" signature="flushReports()[pri:0, instance:com.orangehrm.hybridframework_testCases.LoginTC@4b45a2f5]" started-at="2022-01-11T09:10:16 IST" name="flushReports" finished-at="2022-01-11T09:10:18 IST" duration-ms="1940" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[extent reports flush]]>
+            </line>
+            <line>
+              <![CDATA[close browser window]]>
+            </line>
           </reporter-output>
         </test-method> <!-- flushReports -->
       </class> <!-- com.orangehrm.hybridframework_testCases.LoginTC -->
